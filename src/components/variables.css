@@ -1,0 +1,14 @@
+/* RESPONSIVE TYPE VALUES. SPECIFY WITHOUT px 
+   https://www.smashingmagazine.com/2016/05/fluid-typography/ */
+
+$minFontVal: 16;
+$maxFontVal: 24;
+$minViewportVal: 480;
+$maxViewportVal: 1024;
+
+$minFontSize: $(minFontVal)px;
+$maxFontSize: $(maxFontVal)px;
+$minViewportSize: $(minViewportVal)px;
+$maxViewportSize: $(maxViewportVal)px;
+
+$fluidFontSize: calc($minFontSize + ($maxFontVal - $minFontVal) * (100vw - $minViewportSize) / ($maxViewportVal - $minViewportVal));
