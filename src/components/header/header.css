@@ -1,0 +1,17 @@
+@import '../variables.css';
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    label, select {
+        display: block;
+        margin: 5px 0;
+    }
+    label {font-size: 1.1rem;}
+    select {
+        font-size: .9rem;
+    }
+}
