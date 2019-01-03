@@ -55,11 +55,6 @@
     small, .font_small {font-size: 0.937em;}
 }
 
-@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:700|Proza+Libre:400,400i,700|Libre+Baskerville:400,400i,700|Libre+Franklin:700|Rubik:400,400i,700|Trirong:700|Taviraj:400,400i,700|Work+Sans:700|Eczar:700|Gentium+Basic:400,400i,700');
-
-h1, h2, h3, h4 {font-family: "Cormorant Garamond", serif;}
-p {font-family: "Proza Libre", sans-serif;}
-
 .cormorant-garamond-proza-libre {
     h1, h2, h3, h4 {font-family: "Cormorant Garamond", serif;}
     p {font-family: "Proza Libre", sans-serif;}

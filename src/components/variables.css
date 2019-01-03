@@ -1,6 +1,11 @@
 /* RESPONSIVE TYPE VALUES. SPECIFY WITHOUT px 
    https://www.smashingmagazine.com/2016/05/fluid-typography/ */
 
+$dark: #fbbd49;
+$light: #ede7d9;
+$link: #9b1d20;
+$text: #222;
+
 $minFontVal: 16;
 $maxFontVal: 24;
 $minViewportVal: 480;

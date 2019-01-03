@@ -1,17 +1,17 @@
 @import '../variables.css';
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:700|Proza+Libre:400,400i,700|Libre+Baskerville:400,400i,700|Libre+Franklin:700|Rubik:400,400i,700|Trirong:700|Taviraj:400,400i,700|Work+Sans:700|Eczar:700|Gentium+Basic:400,400i,700');
 
 body {
     font-size: $fluidFontSize;
     hyphens: auto;
+    color: $text;
 }
 
-a {
-    text-decoration: none;
-}
+a {color: $link; text-decoration: none;}
 
-#main-head    {grid-area: header;}
-#main-content {grid-area: content;}
-#main-footer  {grid-area: footer;}
+#main-head    {grid-area: header; background: $dark;}
+#main-content {grid-area: content; background: $light;}
+#main-footer  {grid-area: footer; background: $dark;}
 
 .wrapper {
     min-height: 100vh;
@@ -35,6 +35,14 @@ h1, h2, h3, h4 {
     line-height: 1.1;
     font-weight: 700;
     margin: 2rem 0 .5rem;
+    font-family: "Cormorant Garamond", serif;
 }
 
-p {margin-bottom: 1.3rem;}
+p {
+    margin-bottom: 1.3rem;
+    font-family: "Proza Libre", sans-serif;
+}
+
+@media screen and (max-width: $minViewportSize) {
+    body {font-size: $minFontSize;}
+}

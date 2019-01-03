@@ -13,5 +13,6 @@ form {
     label {font-size: 1.1rem;}
     select {
         font-size: .9rem;
+        background: $light;
     }
 }

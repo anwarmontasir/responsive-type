@@ -1,6 +1,7 @@
 /* eslint-env node */
 const htmlPlugin = require('html-webpack-plugin');
 const miniCssExtractPlugin = require('mini-css-extract-plugin');
+const optimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
   // our starting point for our JavaScript
@@ -16,6 +17,12 @@ module.exports = {
   // gives us source maps
   // (we debug code we wrote, not what ends up getting built)
   devtool: 'inline-source-map',
+  // minify CSS
+  optimization: {
+    minimizer: [
+      new optimizeCSSAssetsPlugin({})
+    ]
+  },
   // plugins add high-level functionality to webpack
   plugins: [
     // cleans the build directory on each build
