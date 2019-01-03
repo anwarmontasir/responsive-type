@@ -1,5 +1,6 @@
 /* eslint-env node */
 const htmlPlugin = require('html-webpack-plugin');
+const miniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   // our starting point for our JavaScript
@@ -21,7 +22,8 @@ module.exports = {
     // new cleanWebpackPlugin(`$__dirname}/build`),
     // create an index.html based on our template
     // will add in <script> to bundle.js
-    new htmlPlugin({ template: './src/index.html' })
+    new htmlPlugin({ template: './src/index.html' }),
+    new miniCssExtractPlugin({ filename: 'main.css' })
   ],
   module: {
     // 'loaders' tell webpack how to require (or import) things
@@ -34,27 +36,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
-          // dynamically put CSS into style tag of document head
-          {
-            loader: 'style-loader',
-            options: { sourceMap: true }
-          },
-          // turns CSS into JS that exports CSS as a string
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1,
-              sourceMap: true
-            }
-          },
-          // allow nested CSS and auto-prefix
-          // browser-specific CSS properties
-          {
-            loader: 'postcss-loader',
-            options: { sourceMap: true }
-          }
-        ]
+        use:  [{ loader: 'style-loader' }, miniCssExtractPlugin.loader, { loader: 'css-loader' }, { loader: 'postcss-loader' }]
       },
       // load images
       {

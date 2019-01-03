@@ -2,7 +2,7 @@ html {height: 100%;}
 
 body {
     min-height: 100%;
-    line-height: 1.4;
+    font: 400 100%/1.4 Helvetica, Arial, sans-serif;
 }
 
 img {
