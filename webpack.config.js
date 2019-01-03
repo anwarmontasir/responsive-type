@@ -1,7 +1,7 @@
 /* eslint-env node */
 const htmlPlugin = require('html-webpack-plugin');
 const miniCssExtractPlugin = require('mini-css-extract-plugin');
-const optimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const optimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
   // our starting point for our JavaScript
