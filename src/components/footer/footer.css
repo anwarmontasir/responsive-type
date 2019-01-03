@@ -1,1 +1,4 @@
-footer {text-align: center;}
+footer {
+    text-align: center;
+    line-height: 1.1;
+}
