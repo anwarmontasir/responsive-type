@@ -16,11 +16,11 @@ module.exports = {
   },
   // gives us source maps
   // (we debug code we wrote, not what ends up getting built)
-  devtool: 'inline-source-map',
+  // devtool: 'inline-source-map',
   // minify CSS
   optimization: {
     minimizer: [
-      new optimizeCSSAssetsPlugin({})
+      new optimizeCSSAssetsPlugin({}),
     ]
   },
   // plugins add high-level functionality to webpack
@@ -29,7 +29,9 @@ module.exports = {
     // new cleanWebpackPlugin(`$__dirname}/build`),
     // create an index.html based on our template
     // will add in <script> to bundle.js
-    new htmlPlugin({ template: './src/index.html' }),
+    new htmlPlugin({ 
+      template: '!!prerender-loader?string!./src/index.html', 
+    }),
     new miniCssExtractPlugin({ filename: 'main.css' })
   ],
   module: {
