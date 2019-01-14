@@ -30,7 +30,7 @@ module.exports = {
     // create an index.html based on our template
     // will add in <script> to bundle.js
     new htmlPlugin({ 
-      template: '!!prerender-loader?string!./src/index.html', 
+      template: './src/index.html', 
     }),
     new miniCssExtractPlugin({ filename: 'main.css' })
   ],
