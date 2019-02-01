@@ -1,5 +1,7 @@
 # Responsive Type
 
+Working demo at [http://www.anwarmontasir.com/responsive-type/](http://www.anwarmontasir.com/responsive-type/)
+
 ## Project Goals
 
 This project was built for the Devsign course I designed and taught in the winter of 2018 at [Alchemy Code Lab](https://www.alchemycodelab.com/). The goal was to introduce students to three web type-related concepts:
