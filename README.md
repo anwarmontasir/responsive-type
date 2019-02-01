@@ -20,7 +20,7 @@ I didn’t have tons of time to prep for this one. The goal wasn’t a multipage
 
 I faced two major development challenges:
 
-1. The project broke as I attempted to migrate to Webpack 4. I had considerable trouble getting my [webpack-cli](https://www.npmjs.com/package/webpack-cli) install recognized. The solution turned out to be the order of my install: as suggested by one of the comments in [this link](https://github.com/webpack/webpack/issues/7197), the solution required uninstalling `[webpack](https://www.npmjs.com/package/webpack)` and `[webpack-cli](https://www.npmjs.com/package/webpack-cli)` dev dependencies, uninstalling both globally, reinstalling both globally, and finally reinstalling the dev dependencies, in that order.
+1. The project broke as I attempted to migrate to Webpack 4. I had considerable trouble getting my [webpack-cli](https://www.npmjs.com/package/webpack-cli) install recognized. The solution turned out to be the order of my install: as suggested by one of the comments in [this link](https://github.com/webpack/webpack/issues/7197), the solution required uninstalling [webpack](https://www.npmjs.com/package/webpack) and [webpack-cli](https://www.npmjs.com/package/webpack-cli) dev dependencies, uninstalling both globally, reinstalling both globally, and finally reinstalling the dev dependencies, in that order.
 
 2. Initially the base font size grew too large on a very wide monitor, such as an iMac, even though the content has a max-width. Then I remembered that 100vw was part of my PostCSS formula for calculating the type size:
 
